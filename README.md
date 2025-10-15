@@ -1,69 +1,41 @@
-# React + TypeScript + Vite
+# 🥗 Zayan – AI Nutritionist
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Zayan is an AI-powered nutritionist platform designed to assist users in generating personalized dietary plans. Built using a modern full-stack architecture, Zayan integrates advanced AI workflows and human oversight to ensure clinical accuracy and safety.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Purpose
 
-## Expanding the ESLint configuration
+Zayan was created to demonstrate how AI can assist in healthcare use cases—in this case, personalized nutrition. The system utilizes a **multi-agent architecture** to perform dynamic nutritional assessments and generate plans tailored to individual needs. To maintain clinical integrity, a **Human-in-the-Loop (HITL)** mechanism ensures all AI-generated content is reviewed by a certified nutritionist before approval.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## ✨ Features
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- ⚙️ **Multi-agent Workflow**: Built with **LangGraph**, the platform uses a router workflow to handle complex nutritional logic.
+- ✅ **Human-in-the-Loop Approval**: Every dietary plan requires manual verification by a human expert before being finalized.
+- 🌐 **Full-Stack Application**: Intuitive front-end with a robust, scalable backend.
+- 🧠 **OpenAI-Powered Intelligence**: Nutritional assessments and plan generation powered by OpenAI APIs.
+- 📋 **Secure Data Management**: Built using SQLAlchemy ORM and SQLite for reliable storage.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🧰 Tech Stack
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Frontend
+- **Vite.js** – Fast build tool for front-end development
+- **React** – UI framework for building responsive components
+- **Tailwind CSS** – Utility-first CSS for rapid styling
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Backend
+- **FastAPI** – High-performance Python web framework
+- **SQLAlchemy** – ORM for database modeling
+- **SQLite** – Lightweight, file-based database
+
+### AI & Agents
+- **LangChain** – Framework for building context-aware LLM applications
+- **LangGraph** – Multi-agent workflow system
+- **OpenAI API** – For language model-powered reasoning and content generation
+
+---
+
